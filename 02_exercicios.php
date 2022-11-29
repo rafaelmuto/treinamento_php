@@ -34,6 +34,65 @@ echo '<pre>';
  * EX04) imprimir na tela a tabuada do 0 ao 100.
  */
 
+echo "WHILE DO WHILE FOR";
+echo "\n";
+echo "\n";
+
+ echo "EX_01) ";
+ $a = 1;
+ while ($a <= 100) {
+    echo "$a, ";
+    $a++;
+ }
+echo "\n";
+echo "\n";
+
+
+// Primeiro ele usa echo, depois ele adiciona +1, mesma funcionalidade que o While
+echo "EX_02) ";
+for($i = 1; $i <= 100; $i++){
+    echo "$i, ";
+}
+echo "\n";
+echo "\n";
+
+
+echo "EX_03) ";
+for($i = 1; $i <= 100; $i++){
+    if($i % 2 == 0){
+        echo "$i, ";
+    }
+}
+echo "\n";
+echo "\n";
+
+
+echo "EX_04) ";
+for($i = 1; $i <= 100; $i++){
+    if($i % 3 == 0){
+        echo "$i, ";
+    }
+}
+echo "\n";
+echo "\n";
+
+
+echo "EX_05) ";
+for($i = 1; $i <= 100; $i++){
+    if($i % 2 == 0 && $i % 3 == 0){
+        echo "$i, ";
+    }
+}
+
+echo "\n";
+echo "\n";
+echo "\n";
+echo "\n";
+
+
+echo "MAP FILTER REDUCE";
+echo "\n";
+echo "\n";
 /**
  * MAP FILTER REDUCE
  * 
@@ -47,6 +106,17 @@ echo '<pre>';
  */
 
 $array = ['a', 3.14, 42, 'pi', 'some_string', 1, 0, 'b', 1.4, 'c','3.14', 'd', 420, 360, '512', 260, 1.2];
+
+// echo "EX_6)";
+
+// function stringField($strg): bool
+// {
+//     return is_string($strg);
+// }
+
+// $typeString  = array_map('stringField', $array);
+
+// print_r("$typeString");
  
 /**
  * EX10) usando o array dado imprima na tela os paises e suas cidades.
