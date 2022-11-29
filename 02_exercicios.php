@@ -62,7 +62,10 @@ $array = [ "Argentina" => ["Buenos Aires", "Córdoba", "Santa Fé"], "Brasil" =>
  * 
  * EX13) construa um array com todos as potencias de 2 entre 0 e 100.
  * 
+ * EX14) dado o array numerico, ordene ele.
  */
+
+ $array_numerico = [4 ,5,1, 7,8,0,2,12,456,78,90, 500, 344, 255, 0];
 
 
 

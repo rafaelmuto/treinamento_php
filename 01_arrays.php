@@ -66,11 +66,11 @@ $array_3 = ['a', 42, 'some_string', 1, 0, 'b', 'c', 'd', 420, 360, '512', 260];
 
 $array_4 = ["Italia"=>"Roma", "Luxemburgo"=>"Luxemburgo", "Bélgica"=>"Bruxelas", "Dinamarca"=>"Copenhagen", "Finlândia"=>"Helsinki", "França" => "Paris", "Eslováquia"=>"Bratislava", "Eslovênia"=>"Liubliana", "Alemanha"=>"Berlim", "Grécia"=>"Atenas", "Irlanda"=>"Dublin", "Holanda" => "Amsterdã", "Portugal" => "Lisboa", "Espanha"=>"Madri", "Suécia"=>"Estocolmo", "Reino Unido"=>"Londres", "Chipre"=>"Nicósia", "Lituânia"=>"Vilnius", "República Tcheca"=>"Praga", "Estônia"=>"Tallinn", "Hungria"=>"Budapeste", "Letônia"=>"Riga", "Malta"=>"Valletta", "Áustria" => "Viena", "Polônia"=>"Varsóvia"];
 
-$array_5 = [ "Argentina" => ["Buenos Aires", "Córdoba", "Santa Fé"], "Brasil" => ["Brasília", "Rio de Janeiro", "São Paulo"], "Colômbia" => ["Cartagena", "Bogotá", "Barranquilla"], "França" => ["Paris", "Nantes", "Lyon"], "Itália" => ["Roma", "Milão", "Veneza"], "Alemanha" => ["Munique", "Berlim", "Frankfurt"] ];
+$array_5 = [ "Argentina" => ["Buenos Aires" => ['El Caminito', 'Messito'], "Córdoba", "Santa Fé"], "Brasil" => ["Brasília", "Rio de Janeiro", "São Paulo"], "Colômbia" => ["Cartagena", "Bogotá", "Barranquilla"], "França" => ["Paris", "Nantes", "Lyon"], "Itália" => ["Roma", "Milão", "Veneza"], "Alemanha" => ["Munique", "Berlim", "Frankfurt"] ];
 
 
-// print_r($array_4);
-
+// print_r($array_5);
+// print_r($array_5['Argentina']['Buenos Aires'][1]);
 
 
 /**
