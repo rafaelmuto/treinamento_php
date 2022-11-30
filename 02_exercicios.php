@@ -239,7 +239,7 @@ $zeroMil = range(0,1000);
 // };
 
 
-echo "EX_12) Construindo uma array de 0 a 100 com todas as potencias de 2 ";
+echo "EX_13) Construindo uma array de 0 a 100 com todas as potencias de 2 ";
 echo "\n";
 echo "\n";
 
@@ -268,7 +268,7 @@ echo "\n";
 
 
 $array_numerico = [4 ,5,1, 7,8,0,2,12,456,78,90, 500, 344, 255, 0];
-echo "EX_13_ DESAFIO) ORDENE UMA ARRAY SEM USAR SORT ";
+echo "EX_14_ DESAFIO) ORDENE UMA ARRAY SEM USAR SORT ";
 echo "\n";
 echo "\n";
 
