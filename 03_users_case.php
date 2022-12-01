@@ -8,9 +8,7 @@ foreach ($users as $user) {
 
     echo '<hr>';
 
-    var_dump($user['email']);
-
-    var_dump($user['name']['first']);
+    var_dump($user);
 
     echo '<hr>';
 

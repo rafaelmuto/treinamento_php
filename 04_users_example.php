@@ -72,6 +72,7 @@
             echo '<p>Address: ' . $user['location']['street']['number'] . ' ' . $user['location']['street']['name'] . $user['location']['city'] . ' - ' . $user['location']['state'] . ' - ' . $user['location']['country'] . ' ZIPCODE: ' . $user['location']['postcode'] . '</p>';
             echo '<p>Timezone: ' . $user['location']['timezone']['description'] . ' (' .  $user['location']['timezone']['offset'] . ') </p>';
             echo '<p>E-mail: ' . $user['email'] . '   Phone: ' . $user['phone'] . '   Mobile: ' . $user['cell'] . '</p>';
+            
 
             echo '</div>';
 

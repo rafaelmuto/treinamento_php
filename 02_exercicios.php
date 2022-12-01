@@ -291,14 +291,11 @@ for ($y = 0; $y <count($array_numerico) ; $y++){
             $array_numerico[$posAtual] = $array_numerico[$posProx]; // o valor da posição atual passa a ser o valor da posição que era seguinte (estamos trocando ela de lugar basicamente)
             $array_numerico[$posProx] = $intemediaria; // pegamos o valor armazenado na variavel $intermediaria e iremos colocar ela no lugar do valor da posição seguinte, fazendo assim os dois valores serem ordenados ENTRE SÍ.
         }
-
     }
-    
     // voltaremos toda essa função para que ela corrija o problema que temos com zero, ja que mesmo comparando e organizando, nosso código vai retornar uma nova array com o zero no meio dela, pra isso devemos fazer todo esse código dentro de um for com o mesmo tamanho da array para que a cada ordenação ele compare o zero até chegar na posição correta.
 
     // Caso queira ver o erro, tire o for($y= 0)...
 }
-
 echo ("\n");
 echo ("result final\n");
 for ($i=0; $i < count($array_numerico) ; $i++) {
