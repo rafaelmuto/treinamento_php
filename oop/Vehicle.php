@@ -5,9 +5,9 @@ abstract class Vehicle implements Drivable
     private Engine $engine;
      private int $gas_tank;
 
-    public function __construct()
+    public function __construct(int $engine_size)
     {
-        $this->engine = new Engine(1);
+        $this->engine = new Engine($engine_size);
         $this->gas_tank = 100;
     }
 
@@ -28,16 +28,27 @@ abstract class Vehicle implements Drivable
         $this->gas_tank += $amount;
     }
 
-    public function drive(int $distance): void
+    public function drive(int $distance): int
     {
-        $gas_used = $distance * $this->engine->getDisplacement();
-
-        $this->gas_tank -= $gas_used;
-
-        if($this->gas_tank < 0) {
-            $this->gas_tank = 0;
-            echo 'OUT OF GAS =(';
+        if(!$this->engine->getStatus()){
+            echo "the engine is off...\n";
+            return 0;
         }
+
+        $distance_traveled = 0;
+        while($this->gas_tank > 0 && $distance_traveled < $distance ) {
+            $distance_traveled++;
+            $this->gas_tank -= $this->engine->getDisplacement();
+        }
+
+        echo "drove: " . $distance_traveled . "km \n";
+
+        if($this->gas_tank <= 0) {
+            $this->gas_tank = 0;
+            echo "OUT OF GAS =( \n";
+        }
+
+        return $distance_traveled;
     }
 
     public function getInfo(): array

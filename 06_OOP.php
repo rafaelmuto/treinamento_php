@@ -13,21 +13,48 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        .container {
+            margin: 100px auto;
+            padding: 1rem;
+            background-color: #ffffff;
+            border: 3px solid #000000;
+            border-radius: 5px;
+            max-width: 900px;
+            color: #000000;
+        }
+        .logs {
+            font-size: 18px;
+        }
     </style>
 </head>
 
 <body>
+<div class="container">
     <h1>Object-Oriented Programing</h1>
     <hr>
+    <pre>
+            <?php
+            include 'oop/include_this.php';
 
-    <?php
+            echo '<div class=logs>';
+
+            $car = new Car(1);
 
 
+            echo '</div><hr>';
+
+            print_r($car->getInfo());
 
 
+            function trackThis(Trackable $trackable)
+            {
+                return $trackable->getLocation();
+            }
 
-    ?>
-
+            ?>
+    </pre>
+</div>
 </body>
 
 </html>

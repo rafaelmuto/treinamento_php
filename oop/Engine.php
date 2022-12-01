@@ -11,10 +11,15 @@ class Engine
         $this->status = false;
     }
 
+    public function getStatus(): bool
+    {
+        return $this->status;
+    }
+
     public function start(): void
     {
         $this->status = true;
-        echo "engine is running! \n";
+        echo "VROOM: engine is running! \n";
     }
 
     public function stop(): void
@@ -32,7 +37,6 @@ class Engine
     {
         return [
             'status' => $this->status,
-            'health' => $this->health,
             'displacement' => $this->displacement
         ];
     }
