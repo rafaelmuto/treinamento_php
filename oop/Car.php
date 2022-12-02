@@ -1,6 +1,6 @@
 <?php
 
-class Car extends Vehicle
+class Car extends Vehicle implements Trackable
 {
     private int $odometer;
 
@@ -28,8 +28,26 @@ class Car extends Vehicle
         return $info;
     }
 
-//    public function getLocation(): string
-//    {
-//        return "the car is at " . $this->odometer . "km";
-//    }
+    public function getLocation(): string
+    {
+        return "the " . get_class($this) . " is at " . $this->odometer . "km";
+    }
+}
+
+
+class Moto extends Vehicle implements Trackable
+{
+    public function getLocation(): string
+    {
+        return "the " . get_class($this) . " esta aqui";
+    }
+}
+
+
+class Cachorro implements Trackable
+{
+    public function getLocation(): string
+    {
+        return "the " . get_class($this) . " esta aqui";
+    }
 }

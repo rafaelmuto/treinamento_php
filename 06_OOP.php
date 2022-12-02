@@ -23,6 +23,7 @@
             max-width: 900px;
             color: #000000;
         }
+
         .logs {
             font-size: 18px;
         }
@@ -30,10 +31,10 @@
 </head>
 
 <body>
-<div class="container">
-    <h1>Object-Oriented Programing</h1>
-    <hr>
-    <pre>
+    <div class="container">
+        <h1>Object-Oriented Programing</h1>
+        <hr>
+        <pre>
             <?php
             include 'oop/include_this.php';
 
@@ -41,20 +42,24 @@
 
             $car = new Car(1);
 
+            $moto = new Moto(1);
+
+            $cachorro = new Cachorro();
+
+            rastrearTrackable($moto);
 
             echo '</div><hr>';
-
             print_r($car->getInfo());
 
 
-            function trackThis(Trackable $trackable)
+            function rastrearTrackable(Trackable $trackableObject)
             {
-                return $trackable->getLocation();
+                echo $trackableObject->getLocation();
             }
 
             ?>
     </pre>
-</div>
+    </div>
 </body>
 
 </html>
