@@ -43,7 +43,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            
+
             gap: 50px;
             margin-bottom: 50px
         }
@@ -112,9 +112,9 @@
         
 
         echo '<div class="assassin_box">';
+
             echo '<img src=' . $user['picture']['large'] . '>';
             
-
             echo '<div class="assassin_information">';
                 echo '<h1>' . 'Identidade Particular' . '</h1>';
                 echo '<div class="assassin_data">';
@@ -130,8 +130,8 @@
                     } else {
                         echo '<h3>' . '<span>Crime:</span> Tráfico de drogas' . '</h3>';
                     }
-                    
                 echo '</div>';
+                
             echo '</div>';
 
         echo '</div>';

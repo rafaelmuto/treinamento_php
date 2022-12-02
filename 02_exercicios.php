@@ -104,6 +104,37 @@ echo "\n";
 echo "\n";
 
 
+
+
+
+// recursivo
+// function fat($fatorial){
+
+//     if($fatorial == 0){
+//         return 1;
+//     }
+//     return $fatorial * fat($fatorial -1);
+// }
+
+// echo fat(5);
+// echo "\n";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 echo "MAP FILTER REDUCE";
 echo "\n";
 echo "\n";
