@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treinamento PHP</title>
+    <title>OOP Tiago</title>
     <style>
         * {
             font-family: monospace;
@@ -29,31 +28,32 @@
         }
     </style>
 </head>
-
 <body>
+
+
     <div class="container">
-        <h1>Object-Oriented Programing</h1>
+        <h1>Orientação a Objetos do Tiago - Eletronicos</h1>
         <hr>
         <pre>
             <?php
-            include 'oop/include_this.php';
+            include 'ooptiago/include_this_display.php';
 
             echo '<div class=logs>';
 
-            $car = new Car(1);
+            $tv = new Display();
 
-            $moto = new Moto(1);
+            print_r("A TV está " . $tv->turnOn());
+            $tv->canalMais();
+            $tv->canalMais();
+            $tv->canalMenos();
+            print_r("Canal: " . $tv->canalMais());
 
-            $cachorro = new Cachorro();
-
-            print_r($moto->getLocation());
 
             echo '</div><hr>';
-            print_r($car->getInfo());
 
             ?>
     </pre>
     </div>
+    
 </body>
-
 </html>
