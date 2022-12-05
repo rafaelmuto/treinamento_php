@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +29,7 @@
         }
     </style>
 </head>
+
 <body>
 
 
@@ -39,21 +41,22 @@
             include 'ooptiago/Engine.php';
             include 'ooptiago/Display.php';
             include 'ooptiago/AudioEnable.php';
-            include 'ooptiago/isGamer.php';
             include 'ooptiago/Tv.php';
             include 'ooptiago/Monitor.php';
 
             echo '<div class=logs>';
 
+
+
             $tv = new Tv();
 
             echo '</div><hr>';
-            print_r($tv->turnOn());
-
+            print_r($tv);
 
             ?>
     </pre>
     </div>
-    
+
 </body>
+
 </html>

@@ -7,12 +7,13 @@ class Tv extends Display implements AudioEnable
 
     public function __construct()
     {
+        parent::__construct();
         $this->volume = 0;
     }
 
     public function volumeMais(): int
     {
-        if (!$this->display->getStatus()) {
+        if (!$this->engine->getStatus()) {
             echo "Primeiro ligue a TV para podermos trocar de canal... \n";
             return 0;
         }
@@ -22,7 +23,7 @@ class Tv extends Display implements AudioEnable
 
     public function volumeMenos(): int
     {
-        if (!$this->display->getStatus()) {
+        if (!$this->engine->getStatus()) {
             echo "Primeiro ligue a TV para podermos trocar de canal... \n";
             return 0;
         }
@@ -34,8 +35,7 @@ class Tv extends Display implements AudioEnable
     {
         return [
             'volume' => $this->volume,
-            'tela' => $this->getStatus()
+            'tela' => $this->engine->getStatus()
         ];
     }
-
 }
