@@ -46,12 +46,11 @@
 
             echo '<div class=logs>';
 
-
-
             $tv = new Tv();
 
-            echo '</div><hr>';
             print_r($tv);
+
+            echo '</div><hr>';
 
             ?>
     </pre>

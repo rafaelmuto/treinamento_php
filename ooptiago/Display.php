@@ -13,7 +13,7 @@ abstract class Display
 
     public function turnOn(): void
     {
-        if (!$this->engine->getStatus()) {
+        if(!$this->engine->getStatus()){
             $this->engine->on();
         } else {
             echo 'Ela já está ligada';
@@ -22,7 +22,7 @@ abstract class Display
 
     public function turnOff(): void
     {
-        if ($this->engine->getStatus()) {
+        if($this->engine->getStatus()){
             $this->engine->off();
         } else {
             echo 'Ela está desligada...';
@@ -35,4 +35,9 @@ abstract class Display
             'tela' => $this->engine->getStatus()
         ];
     }
+
 }
+
+
+
+
