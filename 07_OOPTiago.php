@@ -36,20 +36,20 @@
         <hr>
         <pre>
             <?php
-            include 'ooptiago/include_this_display.php';
+            include 'ooptiago/Engine.php';
+            include 'ooptiago/Display.php';
+            include 'ooptiago/AudioEnable.php';
+            include 'ooptiago/isGamer.php';
+            include 'ooptiago/Tv.php';
+            include 'ooptiago/Monitor.php';
 
             echo '<div class=logs>';
 
-            $tv = new Display();
-
-            print_r("A TV está " . $tv->turnOn());
-            $tv->canalMais();
-            $tv->canalMais();
-            $tv->canalMenos();
-            print_r("Canal: " . $tv->canalMais());
-
+            $tv = new Tv();
 
             echo '</div><hr>';
+            print_r($tv->turnOn());
+
 
             ?>
     </pre>

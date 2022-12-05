@@ -40,16 +40,10 @@
 
             echo '<div class=logs>';
 
-            $car = new Car(1);
-
-            $moto = new Moto(1);
-
-            $cachorro = new Cachorro();
-
-            print_r($moto->getLocation());
+            $car = new Engine(5);
 
             echo '</div><hr>';
-            print_r($car->getInfo());
+            print_r($car);
 
             ?>
     </pre>

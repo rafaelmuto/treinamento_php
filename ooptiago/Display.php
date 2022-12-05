@@ -1,60 +1,40 @@
 <?php
 
 
-class Display
+abstract class Display
 {
-    private string $tela;
-    private int $canal;
+    private Engine $engine;
 
 
     public function __construct()
     {
-        $this->tela = "desligada";
-        $this->canal = 0;
+        $this->engine = new Engine();
     }
 
-    public function turnOn(): string
+    public function turnOn(): void
     {
-       if($this->tela == "desligada"){
-        $this->tela = 'ligada';
-        return $this->tela . "\n";
+        if(!$this->engine->getStatus()){
+            $this->tela = "ligada";
+            $this->engine->on();
+        } else {
+            echo 'Ela já está ligada';
         }
-        return 'já está ligada...' . "\n";
     }
 
-    public function turnOff(): string
+    public function turnOff(): void
     {
-        if($this->tela == "ligada"){
+        if($this->engine->getStatus()){
             $this->tela = "desligada";
-            return $this->tela . "\n";
-        } 
-        return 'já está desligada...' . "\n";
-    }
-
-    public function canalMais(): string
-    {
-        if ($this->tela == "desligada") {
-            return "Primeiro ligue para podermos trocar de canal...";
+            $this->engine->off();
+        } else {
+            echo 'Ela está desligada...';
         }
-
-        return $this->canal += 1;
     }
-
-    public function canalMenos(): string
-    {
-        if ($this->tela == "desligada") {
-            return "Primeiro ligue para podermos trocar de canal...";
-        }
-
-        return $this->canal -= 1;
-    }
-
 
     public function getInfo(): array
     {
         return [
-            'tela' => $this->tela,
-            'canal' => $this->canal
+            'tela' => $this->engine->getStatus()
         ];
     }
 
