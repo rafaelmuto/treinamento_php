@@ -3,9 +3,9 @@
 interface AudioEnable
 {
 
-    public function volumeMais(): int;
+    public function audioUp(): int;
 
-    public function volumeMenos(): int;
+    public function audioDown(): int;
 
 }
 

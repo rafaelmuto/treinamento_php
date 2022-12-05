@@ -1,10 +1,10 @@
 <?php
 
 
-abstract class Display
+class Display
 {
-    private Engine $engine;
-
+    protected Engine $engine;
+    private string $entrada;
 
     public function __construct()
     {
@@ -32,7 +32,8 @@ abstract class Display
     public function getInfo(): array
     {
         return [
-            'tela' => $this->engine->getStatus()
+            'tela' => $this->engine->getStatus(),
+            'entrada' => $this->entrada
         ];
     }
 

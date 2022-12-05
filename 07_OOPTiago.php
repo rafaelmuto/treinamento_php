@@ -40,15 +40,18 @@
             <?php
             include 'ooptiago/Engine.php';
             include 'ooptiago/Display.php';
+            include 'ooptiago/Hdmi.php';
             include 'ooptiago/AudioEnable.php';
             include 'ooptiago/Tv.php';
             include 'ooptiago/Monitor.php';
 
             echo '<div class=logs>';
 
-            $tv = new Tv();
+            $monitor = new Monitor(30);
 
-            print_r($tv);
+
+            $monitor->hdmi();
+            print_r($monitor->getInfo());
 
             echo '</div><hr>';
 

@@ -1,6 +1,6 @@
 <?php
 
-class Tv extends Display implements AudioEnable
+class Tv extends Display implements AudioEnable, Hdmi
 {
     // sintonizar canais de TV
     private int $volume;
@@ -11,28 +11,36 @@ class Tv extends Display implements AudioEnable
         parent::__construct();
     }
 
-    public function volumeMais(): int
+    public function audioUp(): int
     {   
         if (!$this->engine->getStatus()) {
-            echo "Primeiro ligue a TV para podermos trocar de canal... \n";
+            echo "Primeiro ligue a TV para podermos aumentar o volume... \n";
+            return $this->volume = 0;
         }
 
         return $this->volume += 1;
+
     }
 
-    public function volumeMenos(): bool
+    public function audioDown(): int
     {
         if (!$this->engine->getStatus()) {
-            echo "Primeiro ligue a TV para podermos trocar de canal... \n";
+            echo "Primeiro ligue a TV para podermos baixar o volume... \n";
+            return $this->volume = 0;
         }
+        return $this->volume -= 1 . "\n";
+    }
 
-        return $this->volume -= 1;
+    public function hdmi(): string
+    {
+        return $this->entrada = 'Entrada HDMI';
     }
 
     public function getInfo(): array
     {
         return [
-            'volume' => $this->volume
+            'volume' => $this->volume,
+            'entrada' => $this->entrada
         ];
     }
 }

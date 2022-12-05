@@ -17,13 +17,13 @@ class Engine
     public function on(): void
     {
         $this->status = true;
-        echo "Barulho de TV ligando !!! \n";
+        echo "Barulho de Display ligando !!! \n";
     }
 
     public function off(): void 
     {
         $this->status = false;
-        echo "Barulho de TV desligando... \n";
+        echo "Barulho de Display desligando... \n";
     }
 
     public function getInfo(): array
