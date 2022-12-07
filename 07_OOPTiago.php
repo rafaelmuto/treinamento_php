@@ -47,11 +47,20 @@
 
             echo '<div class=logs>';
 
-            $monitor = new Monitor(30);
+            class MonitorFactory
+            {
+                public function createMonitor(): Monitor
+                {
+                    return new Monitor(60);
+                }
+            }
+
+            $criar_monitor = new MonitorFactory();
+            $monitor = $criar_monitor->createMonitor();
 
 
-            $monitor->hdmi();
-            print_r($monitor->getInfo());
+            $monitor->hdmi(); 
+            print_r($monitor->desempenhoGames());
 
             echo '</div><hr>';
 

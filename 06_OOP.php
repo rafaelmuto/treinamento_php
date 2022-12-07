@@ -40,10 +40,36 @@
 
             echo '<div class=logs>';
 
-            $car = new Engine(5);
+            
+            class CarFactory
+            {
+                public function createCar(): Car
+                {
+                    return new Car(3);
+                }
+            }
 
-            echo '</div><hr>';
-            print_r($car);
+            $criacao_de_carro = new CarFactory();
+            $carro = $criacao_de_carro->createCar();
+            $carro->turnOn();
+            $carro->drive(1);
+
+
+            var_dump($carro);
+
+
+
+
+
+
+
+
+
+
+            // $car = new Engine(5);
+
+            // echo '</div><hr>';
+            // print_r($car);
 
             ?>
     </pre>
