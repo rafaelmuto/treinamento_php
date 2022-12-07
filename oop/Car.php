@@ -1,6 +1,6 @@
 <?php
 
-class Car extends Vehicle implements Trackable
+class Car extends Vehicle implements Trackable, Drivable
 {
     private int $odometer;
 
