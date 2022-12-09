@@ -77,10 +77,10 @@ $array_5 = [ "Argentina" => ["Buenos Aires" => ['El Caminito', 'Messito'], "Cór
  *  => FOREACH
  */
 
-// foreach($array_1 as $item) {
-//     print_r($item);
-//     echo "\n";
-// }
+foreach($array_1 as $item) {
+    print_r($item);
+    echo "\n";
+}
 
 
 
@@ -89,7 +89,6 @@ $array_5 = [ "Argentina" => ["Buenos Aires" => ['El Caminito', 'Messito'], "Cór
 /**
  *  => MAP
  */
-
 // $result = [];
 // foreach($array_0 as $item) {
 //     $result[] = $item * 10;

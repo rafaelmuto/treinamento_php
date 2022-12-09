@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,10 @@
     <title>Treinamento</title>
     <style>
         * {
-        font-family: monospace;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         .container {
@@ -33,11 +34,11 @@
             column-gap: 1rem;
         }
 
-        .user_box:nth-child(odd){
+        .user_box:nth-child(odd) {
             background-color: #ecf0f1;
-        } 
+        }
 
-        .user_box:nth-child(even){
+        .user_box:nth-child(even) {
             background-color: #bdc3c7;
         }
 
@@ -45,42 +46,44 @@
             border-radius: 50%;
             /* margin: .5rem; */
         }
-
     </style>
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-<h1> Usuarios: </h1>
-<hr>
-<br>
+        <h1> Usuarios: </h1>
+        <hr>
+        <br>
 
-<?php
-include 'users.php';
+        <?php
+        include 'users.php';
 
-echo '<pre>';
+        echo '<pre>';
 
-foreach($users as $user) {
-    echo '<div class="user_box">';
+        foreach ($users as $user) {
+            echo '<div class="user_box">';
 
-    echo '<img src=' .  $user['picture']['large'] . '>';
+            echo '<img src=' .  $user['picture']['large'] . '>';
 
-    echo '<div class="user_info">';
-    echo '<p>' . $user['name']['title'] . ' ' . $user['name']['first'] . ' ' . $user['name']['last'] . ' [' . $user['nat'] . ']</p>';
-    echo '<p>Address: ' . $user['location']['street']['number'] . ' ' . $user['location']['street']['name'] . $user['location']['city'] . ' - ' . $user['location']['state'] . ' - ' . $user['location']['country'] . ' ZIPCODE: ' . $user['location']['postcode'] . '</p>';
-    echo '<p>Timezone: ' . $user['location']['timezone']['description'] . ' (' .  $user['location']['timezone']['offset'] . ') </p>';
-    echo '<p>E-mail: ' . $user['email'] . '   Phone: ' . $user['phone'] . '   Mobile: ' . $user['cell'] . '</p>';
-    
-    echo '</div>';
+            echo '<div class="user_info">';
+            echo '<p>' . $user['name']['title'] . ' ' . $user['name']['first'] . ' ' . $user['name']['last'] . ' [' . $user['nat'] . ']</p>';
+            echo '<p>Address: ' . $user['location']['street']['number'] . ' ' . $user['location']['street']['name'] . $user['location']['city'] . ' - ' . $user['location']['state'] . ' - ' . $user['location']['country'] . ' ZIPCODE: ' . $user['location']['postcode'] . '</p>';
+            echo '<p>Timezone: ' . $user['location']['timezone']['description'] . ' (' .  $user['location']['timezone']['offset'] . ') </p>';
+            echo '<p>E-mail: ' . $user['email'] . '   Phone: ' . $user['phone'] . '   Mobile: ' . $user['cell'] . '</p>';
+            
 
-    echo '</div>';
-}
+            echo '</div>';
 
-?>
+            echo '</div>';
+        }
 
-</div>
+        ?>
 
-    
+    </div>
+
+
 </body>
+
 </html>

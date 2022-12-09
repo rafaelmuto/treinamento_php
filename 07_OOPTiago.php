@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treinamento PHP</title>
+    <title>OOP Tiago</title>
     <style>
         * {
             font-family: monospace;
@@ -31,49 +31,43 @@
 </head>
 
 <body>
+
+
     <div class="container">
-        <h1>Object-Oriented Programing</h1>
+        <h1>Orientação a Objetos do Tiago - Eletronicos</h1>
         <hr>
         <pre>
             <?php
-            include 'oop/include_this.php';
+            include 'ooptiago/Engine.php';
+            include 'ooptiago/Display.php';
+            include 'ooptiago/Hdmi.php';
+            include 'ooptiago/AudioEnable.php';
+            include 'ooptiago/Tv.php';
+            include 'ooptiago/Monitor.php';
 
             echo '<div class=logs>';
 
-            
-            class CarFactory
+            class MonitorFactory
             {
-                public function createCar(): Car
+                public function createMonitor(): Monitor
                 {
-                    return new Car(3);
+                    return new Monitor(60);
                 }
             }
 
-            $criacao_de_carro = new CarFactory();
-            $carro = $criacao_de_carro->createCar();
-            $carro->turnOn();
-            $carro->drive(1);
+            $criar_monitor = new MonitorFactory();
+            $monitor = $criar_monitor->createMonitor();
 
 
-            var_dump($carro);
+            $monitor->hdmi(); 
+            print_r($monitor->desempenhoGames());
 
-
-
-
-
-
-
-
-
-
-            // $car = new Engine(5);
-
-            // echo '</div><hr>';
-            // print_r($car);
+            echo '</div><hr>';
 
             ?>
     </pre>
     </div>
+
 </body>
 
 </html>
