@@ -18,7 +18,6 @@
 <?php
 echo '<pre>';
 
-
 /**
  * WHILE DO WHILE FOR
  * 
@@ -34,6 +33,45 @@ echo '<pre>';
  * EX04) imprimir na tela a tabuada do 0 ao 100.
  */
 
+$i = 0;
+
+// echo "EX 01"
+// while($i <= 100) {
+//     echo $i;
+//     echo "\n";
+//     $i++;
+// }
+
+// echo "EX 02"
+// for ($i = 0; $i <= 100; $i++) {
+//     echo $i;
+//     echo "\n";
+// }
+
+// echo "Ex 03";
+// echo "\n";
+// for ($i = 0; $i <= 100; $i++) {
+//     // if $i % 2 == 0 ? echo $i : echo $i;
+//     // if ($i % 2 == 0) {
+//     //     echo "$i";
+//     //     echo "\n";
+//     // }
+
+//     // if ($i % 3 == 0) {
+//     //     echo "$i";
+//     //     echo "\n";
+//     // }
+    
+//     if ($i % 3 == 0 || $i % 2 == 0) {
+//         echo "$i";
+//         echo "\n";
+//     }
+// }
+
+// echo "Ex 04";
+// echo "\n";
+
+
 /**
  * MAP FILTER REDUCE
  * 
@@ -47,7 +85,21 @@ echo '<pre>';
  */
 
 $array = ['a', 3.14, 42, 'pi', 'some_string', 1, 0, 'b', 1.4, 'c','3.14', 'd', 420, 360, '512', 260, 1.2];
- 
+
+echo "Ex 06";
+echo "\n";
+foreach ($array as $item) {
+    if (filter_var($item, FILTER_VALIDATE_INT)!== false) {
+        echo "$item";
+        echo "\n";
+    }
+}
+
+// if (filter_var($int, FILTER_VALIDATE_INT)!== false) {
+//     echo("Variable is an integer");
+// } else {
+//     echo("Variable is not an integer");
+// }
 /**
  * EX10) usando o array dado imprima na tela os paises e suas cidades.
  * 
