@@ -70,6 +70,13 @@ $i = 0;
 
 // echo "Ex 04";
 // echo "\n";
+// foreach(range(0, 100) as $firstNumber) {
+//     foreach(range(0, 10) as $secondNumber) {
+//         echo $firstNumber . " x " . $secondNumber . " = " . ($firstNumber * $secondNumber);
+//         echo "\n";
+//     }
+//     echo "\n";
+// }
 
 
 /**
@@ -86,20 +93,39 @@ $i = 0;
 
 $array = ['a', 3.14, 42, 'pi', 'some_string', 1, 0, 'b', 1.4, 'c','3.14', 'd', 420, 360, '512', 260, 1.2];
 
-echo "Ex 06";
-echo "\n";
-foreach ($array as $item) {
-    if (filter_var($item, FILTER_VALIDATE_INT)!== false) {
-        echo "$item";
-        echo "\n";
-    }
-}
-
-// if (filter_var($int, FILTER_VALIDATE_INT)!== false) {
-//     echo("Variable is an integer");
-// } else {
-//     echo("Variable is not an integer");
+// echo "Ex 06";
+// foreach ($array as $item) {
+    // if (gettype($item) == "string") {
+    //     var_dump(($item));
+    // }
 // }
+
+// echo "Ex 07";
+// foreach ($array as $item) {
+//     if (filter_var($item, FILTER_VALIDATE_INT) !== false) {
+//         echo "$item";
+//         echo "\n";
+//     }
+// }
+
+// echo EX08
+// $sum = 0;
+// foreach ($array as $item) {
+//     if (filter_var($item, FILTER_VALIDATE_FLOAT)) {
+//         $sum += $item;
+//     }
+// }
+// echo $sum;
+
+// echo "EX 09"
+// $stringConcat = '';
+// foreach ($array as $item) {
+//     if (gettype($item) == "string") {
+//         $stringConcat .= $item . ',';
+//     }
+// }
+// echo $stringConcat;
+
 /**
  * EX10) usando o array dado imprima na tela os paises e suas cidades.
  * 
@@ -108,6 +134,28 @@ foreach ($array as $item) {
 
 $array = [ "Argentina" => ["Buenos Aires", "Córdoba", "Santa Fé"], "Brasil" => ["Brasília", "Rio de Janeiro", "São Paulo"], "Colômbia" => ["Cartagena", "Bogotá", "Barranquilla"], "França" => ["Paris", "Nantes", "Lyon"], "Itália" => ["Roma", "Milão", "Veneza"], "Alemanha" => ["Munique", "Berlim", "Frankfurt"] ];
 
+// echo "EX10";
+// echo "\n";
+// foreach($array as $key=>$country) {
+//     echo strtoupper($key);
+//     echo "\n";
+//     foreach($country as $states) {
+//         echo $states;
+//         echo "\n";
+//     }
+//     echo "\n";
+// }
+
+// echo "EX11";
+// echo "\n";
+// foreach($array as $key=>$country) {
+//     foreach($country as $states) {
+//         if (substr($states, 0, 1) == 'B') {
+//             echo $states;
+//             echo "\n";
+//         }
+//     }
+// }
 
 /**
  * EX12) usando a função range(), nativa do PHP, construa um array com todos os numeros entre 0 e 1000.
@@ -119,7 +167,24 @@ $array = [ "Argentina" => ["Buenos Aires", "Córdoba", "Santa Fé"], "Brasil" =>
 
  $array_numerico = [4 ,5,1, 7,8,0,2,12,456,78,90, 500, 344, 255, 0];
 
+//  echo "EX12";
+//  echo "\n";
+//  foreach(range(0, 1000) as $number) {
+//      echo $number;
+//      echo "\n";
+//  }
 
+// echo "EX13";
+// echo "\n";
+
+
+// echo "EX14";
+// echo "\n";
+sort($array_numerico);
+foreach($array_numerico as $item) {
+    echo $item;
+    echo "\n";
+}
 
 ?>  
 </body>
