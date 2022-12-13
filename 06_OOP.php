@@ -34,31 +34,17 @@
     <div class="container">
         <h1>Object-Oriented Programing</h1>
         <hr>
-        <pre>
+        <div class=logs>
+            <pre>
             <?php
             include 'oop/include_this.php';
 
-            echo '<div class=logs>';
-
-            $car = new Car(1);
-
-            $moto = new Moto(1);
-
-            $cachorro = new Cachorro();
-
-            rastrearTrackable($moto);
-
-            echo '</div><hr>';
-            print_r($car->getInfo());
 
 
-            function rastrearTrackable(Trackable $trackableObject)
-            {
-                echo $trackableObject->getLocation();
-            }
 
             ?>
-    </pre>
+            </pre>
+        </div>
     </div>
 </body>
 

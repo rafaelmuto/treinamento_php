@@ -4,15 +4,23 @@ include 'users.php';
 
 echo '<pre>';
 
-foreach($users as $user) {
+$user = $users[32];
+
+echo '<hr>';
+
+print_r($users[32]);
 
 
-    // echo var_dump($user['name']);
+
+// foreach ($users as $user) {
 
 
-    echo '<hr>';
+//     // echo var_dump($user['name']);
 
-    var_dump($user);
 
-    // die();
-}
+//     echo '<hr>';
+
+//     print_r($user[0]);
+
+//     // die();
+// }
